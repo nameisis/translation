@@ -1,0 +1,1 @@
+# nameisis/translation-bundle
