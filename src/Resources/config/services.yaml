@@ -1,0 +1,188 @@
+parameters:
+    nameisis_translation.translator.class: Nameisis\TranslationBundle\Translation\Translator
+    nameisis_translation.loader.database.class: Nameisis\TranslationBundle\Translation\Loader\DatabaseLoader
+    nameisis_translation.trans_unit.manager.class: Nameisis\TranslationBundle\Manager\TransUnitManager
+    nameisis_translation.file.manager.class: Nameisis\TranslationBundle\Manager\FileManager
+    nameisis_translation.locale.manager.class: Nameisis\TranslationBundle\Manager\LocaleManager
+    nameisis_translation.importer.file.class: Nameisis\TranslationBundle\Translation\Importer\FileImporter
+    nameisis_translation.exporter_collector.class: Nameisis\TranslationBundle\Translation\Exporter\ExporterCollector
+    nameisis_translation.exporter.xliff.class: Nameisis\TranslationBundle\Translation\Exporter\XliffExporter
+    nameisis_translation.exporter.json.class: Nameisis\TranslationBundle\Translation\Exporter\JsonExporter
+    nameisis_translation.exporter.yml.class: Nameisis\TranslationBundle\Translation\Exporter\YamlExporter
+    nameisis_translation.exporter.php.class: Nameisis\TranslationBundle\Translation\Exporter\PhpExporter
+    nameisis_translation.orm.translation_storage.class: Nameisis\TranslationBundle\Storage\DoctrineORMStorage
+    nameisis_translation.orm.listener.class: Nameisis\TranslationBundle\Storage\Listener\DoctrineORMListener
+    nameisis_translation.orm.trans_unit.class: Nameisis\TranslationBundle\Entity\TransUnit
+    nameisis_translation.orm.translation.class: Nameisis\TranslationBundle\Entity\Translation
+    nameisis_translation.orm.file.class: Nameisis\TranslationBundle\Entity\File
+    nameisis_translation.orm.domain.class: Nameisis\TranslationBundle\Entity\Domain
+    nameisis_translation.data_grid.formatter.class: Nameisis\TranslationBundle\Utils\DataGrid\DataGridFormatter
+    nameisis_translation.data_grid.request_handler.class: Nameisis\TranslationBundle\Utils\DataGrid\DataGridRequestHandler
+    nameisis_translation.overview.stats_aggregator.class: Nameisis\TranslationBundle\Utils\Overview\StatsAggregator
+    nameisis_translation.form.handler.trans_unit.class: Nameisis\TranslationBundle\Form\Handler\TransUnitFormHandler
+    nameisis_translation.listener.get_database_resources.class: Nameisis\TranslationBundle\EventDispatcher\GetDatabaseResourcesListener
+    nameisis_translation.listener.clean_translation_cache.class: Nameisis\TranslationBundle\EventDispatcher\CleanTranslationCacheListener
+    nameisis_translation.token_finder.class: Nameisis\TranslationBundle\Utils\Profiler\TokenFinder
+    nameisis_translation.command.import_translations.class: Nameisis\TranslationBundle\Command\ImportTranslationsCommand
+    nameisis_translation.command.export_translations.class: Nameisis\TranslationBundle\Command\ExportTranslationsCommand
+    nameisis_translation.importer.case_insensitive: false
+    nameisis_translation.token_finder.limit: 15
+    nameisis_translation.translator.options:
+        cache_dir: '%kernel.cache_dir%/translations'
+        debug: '%kernel.debug%'
+
+services:
+    nameisis_translation.loader.database:
+        class: '%nameisis_translation.loader.database.class%'
+        arguments:
+            - '@nameisis_translation.translation_storage'
+        tags:
+            -
+                name: translation.loader
+                alias: database
+
+    nameisis_translation.trans_unit.manager:
+        class: '%nameisis_translation.trans_unit.manager.class%'
+        public: true
+        arguments:
+            - '@nameisis_translation.translation_storage'
+            - '@nameisis_translation.file.manager'
+            - '%kernel.project_dir%'
+
+    nameisis_translation.file.manager:
+        class: '%nameisis_translation.file.manager.class%'
+        arguments:
+            - '@nameisis_translation.translation_storage'
+            - '%kernel.project_dir%'
+
+    nameisis_translation.locale.manager:
+        class: '%nameisis_translation.locale.manager.class%'
+        public: true
+        arguments:
+            - '%nameisis_translation.locales%'
+
+    nameisis_translation.importer.file:
+        class: '%nameisis_translation.importer.file.class%'
+        arguments:
+            - ~,
+            - '@nameisis_translation.translation_storage'
+            - '@nameisis_translation.trans_unit.manager'
+            - '@nameisis_translation.file.manager'
+        calls:
+            -
+                - setCaseInsensitiveInsert
+                -
+                    - '%nameisis_translation.importer.case_insensitive%'
+
+    nameisis_translation.exporter_collector:
+        class: '%nameisis_translation.exporter_collector.class%'
+
+    nameisis_translation.exporter.xliff:
+        class: '%nameisis_translation.exporter.xliff.class%'
+        tags:
+            -
+                name: nameisis_translation.exporter
+                alias: xlf
+
+    nameisis_translation.exporter.json:
+        class: '%nameisis_translation.exporter.json.class%'
+        arguments:
+            - '%nameisis_translation.exporter.json_hierarchical_format%'
+        tags:
+            -
+                name: nameisis_translation.exporter
+                alias: json
+
+    nameisis_translation.exporter.yml:
+        class: '%nameisis_translation.exporter.yml.class%'
+        arguments:
+            - '%nameisis_translation.exporter.use_yml_tree%'
+        tags:
+            -
+                name: nameisis_translation.exporter
+                alias: yml
+
+    nameisis_translation.exporter.php:
+        class: '%nameisis_translation.exporter.php.class%'
+        tags:
+            -
+                name: nameisis_translation.exporter
+                alias: php
+
+    nameisis_translation.data_grid.formatter:
+        class: '%nameisis_translation.data_grid.formatter.class%'
+        public: true
+        arguments:
+            - '@nameisis_translation.locale.manager'
+            - '%nameisis_translation.storage%'
+
+    nameisis_translation.data_grid.request_handler:
+        class: '%nameisis_translation.data_grid.request_handler.class%'
+        public: true
+        arguments:
+            - '@nameisis_translation.trans_unit.manager'
+            - '@nameisis_translation.file.manager'
+            - '@nameisis_translation.translation_storage'
+            - '@nameisis_translation.locale.manager'
+        calls:
+            -
+                - setCreateMissing
+                -
+                    - '%nameisis_translation.dev_tools.create_missing%'
+            -
+                - setDefaultFileFormat
+                -
+                    - '%nameisis_translation.dev_tools.file_format%'
+
+    nameisis_translation.overview.stats_aggregator:
+        class: '%nameisis_translation.overview.stats_aggregator.class%'
+        public: true
+        arguments:
+            - '@nameisis_translation.translation_storage'
+            - '@nameisis_translation.locale.manager'
+
+    nameisis_translation.form.handler.trans_unit:
+        class: '%nameisis_translation.form.handler.trans_unit.class%'
+        public: true
+        arguments:
+            - '@nameisis_translation.trans_unit.manager'
+            - '@nameisis_translation.file.manager'
+            - '@nameisis_translation.translation_storage'
+            - '@nameisis_translation.locale.manager'
+            - '%kernel.project_dir%'
+
+    nameisis_translation.listener.get_database_resources:
+        class: '%nameisis_translation.listener.get_database_resources.class%'
+        tags:
+            -
+                name: kernel.event_listener
+                event: nameisis_translation.event.get_database_resources
+                method: onGetDatabaseResources
+        arguments:
+            - '@nameisis_translation.translation_storage'
+            - '%nameisis_translation.storage%'
+
+    Nameisis\TranslationBundle\Command\ImportTranslationsCommand:
+        class: '%nameisis_translation.command.import_translations.class%'
+        arguments:
+            - '@translator'
+            - '@nameisis_translation.locale.manager'
+            - '@nameisis_translation.importer.file'
+            - '@nameisis_translation.translator'
+            - '%kernel.project_dir%'
+            - '%kernel.bundles%'
+        tags:
+            -
+                name: console.command
+
+    Nameisis\TranslationBundle\Command\ExportTranslationsCommand:
+        class: '%nameisis_translation.command.export_translations.class%'
+        arguments:
+            - '%kernel.project_dir%'
+            - '@filesystem'
+            - '@nameisis_translation.translation_storage'
+            - '@nameisis_translation.translator'
+            - '@nameisis_translation.exporter_collector'
+        tags:
+            -
+                name: console.command

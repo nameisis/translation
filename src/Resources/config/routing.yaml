@@ -1,0 +1,12 @@
+nameisis_translation_controllers:
+    resource: ../../Controller/
+    type: annotation
+    prefix: /nameisis
+
+nameisis_default:
+    path: /nameisis
+    controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::redirectAction
+    defaults:
+        route: nameisis_translation_overview
+        permanent: true
+        keepRequestMethod: true

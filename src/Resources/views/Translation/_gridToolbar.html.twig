@@ -1,0 +1,19 @@
+<div class="page-header">
+    <h1>
+        {{ 'translations.page_title'|trans({}, 'NameisisTranslationBundle') }}
+        <div class="right">
+            <a href="{{ path('nameisis_translation_domain_new') }}" role="button" class="btn btn-success">
+                <span class="glyphicon glyphicon-plus"></span>
+                {{ 'domain.new_domain'|trans({}, 'NameisisTranslationBundle') }}
+            </a>
+            <a href="{{ path('nameisis_translation_new') }}" role="button" class="btn btn-success">
+                <span class="glyphicon glyphicon-plus"></span>
+                {{ 'translations.new_translation'|trans({}, 'NameisisTranslationBundle') }}
+            </a>
+            <a href="{{ path('nameisis_translation_overview') }}" role="button" class="btn btn-primary">
+                <span class="glyphicon glyphicon-tasks"></span>
+                {{ 'overview.page_title'|trans({}, 'NameisisTranslationBundle') }}
+            </a>
+        </div>
+    </h1>
+</div>

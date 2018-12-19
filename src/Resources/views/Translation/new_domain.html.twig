@@ -1,0 +1,38 @@
+{% extends layout %}
+
+{% block nameisis_stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ preload(asset('bundles/nameisistranslation/css/translation.css')) }}">
+{% endblock %}
+
+{% block nameisis_content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>{{ 'domain.add_domain'|trans({}, 'NameisisTranslationBundle') }}</h3>
+            </div>
+            <div class="col-md-6">
+                {{ form_start(form, {'action': path('nameisis_translation_domain_new'), 'method': 'POST', 'attr': {'class': 'form form-vertical'}}) }}
+
+                <div class="form-group input-field">
+                    {{ form_label(form.name) }}
+                    {{ form_widget(form.name, { 'attr': {'class': 'form-control'} }) }}
+                    <span class="text-danger">{{ form_errors(form.name) }}</span>
+                </div>
+
+                <div class="form-group">
+                    <a href="{{ path('nameisis_translation_grid') }}" class="btn btn-default">
+                        {{ 'translations.back_to_list'|trans({}, 'NameisisTranslationBundle') }}
+                    </a>
+
+                    <div class="btn-group right">
+                        {{ form_widget(form.save, { 'attr': {'id': 'trans-unit-submit', 'name': 'trans-unit-submit', 'class': 'btn btn-primary'} }) }}
+                        {{ form_widget(form.save_add, { 'attr': {'id': 'trans-unit-submit-2', 'name': 'trans-unit-submit-2', 'class': 'btn btn-primary'} }) }}
+                    </div>
+                </div>
+
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
