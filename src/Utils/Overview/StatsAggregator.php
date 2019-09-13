@@ -1,9 +1,9 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Utils\Overview;
+namespace Selonia\TranslationBundle\Utils\Overview;
 
-use Nameisis\TranslationBundle\Manager\LocaleManagerInterface;
-use Nameisis\TranslationBundle\Storage\StorageInterface;
+use Selonia\TranslationBundle\Manager\LocaleManagerInterface;
+use Selonia\TranslationBundle\Storage\StorageInterface;
 
 class StatsAggregator
 {

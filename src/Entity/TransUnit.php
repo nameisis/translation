@@ -1,16 +1,16 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Entity;
+namespace Selonia\TranslationBundle\Entity;
 
 use DateTime;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Exception;
-use Nameisis\TranslationBundle\Manager\TranslationInterface;
-use Nameisis\TranslationBundle\Manager\TransUnitInterface;
-use Nameisis\TranslationBundle\Model\Domain as DomainModel;
-use Nameisis\TranslationBundle\Model\TransUnit as TransUnitModel;
+use Selonia\TranslationBundle\Manager\TranslationInterface;
+use Selonia\TranslationBundle\Manager\TransUnitInterface;
+use Selonia\TranslationBundle\Model\Domain as DomainModel;
+use Selonia\TranslationBundle\Model\TransUnit as TransUnitModel;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
@@ -25,7 +25,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  *     }
  * )
  * @ORM\Entity(
- *     repositoryClass = "Nameisis\TranslationBundle\Repository\TransUnitRepository"
+ *     repositoryClass = "Selonia\TranslationBundle\Repository\TransUnitRepository"
  * )
  * @ORM\HasLifecycleCallbacks()
  */

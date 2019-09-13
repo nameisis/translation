@@ -1,8 +1,8 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Translation\Loader;
+namespace Selonia\TranslationBundle\Translation\Loader;
 
-use Nameisis\TranslationBundle\Storage\StorageInterface;
+use Selonia\TranslationBundle\Storage\StorageInterface;
 use Symfony\Component\Translation\Loader\LoaderInterface;
 use Symfony\Component\Translation\MessageCatalogue;
 

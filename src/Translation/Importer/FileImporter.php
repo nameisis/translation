@@ -1,13 +1,13 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Translation\Importer;
+namespace Selonia\TranslationBundle\Translation\Importer;
 
-use Nameisis\TranslationBundle\Entity\Translation;
-use Nameisis\TranslationBundle\Manager\FileManagerInterface;
-use Nameisis\TranslationBundle\Manager\TranslationInterface;
-use Nameisis\TranslationBundle\Manager\TransUnitInterface;
-use Nameisis\TranslationBundle\Manager\TransUnitManagerInterface;
-use Nameisis\TranslationBundle\Storage\StorageInterface;
+use Selonia\TranslationBundle\Entity\Translation;
+use Selonia\TranslationBundle\Manager\FileManagerInterface;
+use Selonia\TranslationBundle\Manager\TranslationInterface;
+use Selonia\TranslationBundle\Manager\TransUnitInterface;
+use Selonia\TranslationBundle\Manager\TransUnitManagerInterface;
+use Selonia\TranslationBundle\Storage\StorageInterface;
 use Symfony\Component\Finder\SplFileInfo;
 
 class FileImporter

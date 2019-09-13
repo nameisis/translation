@@ -1,12 +1,12 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Command;
+namespace Selonia\TranslationBundle\Command;
 
 use InvalidArgumentException;
 use LogicException;
-use Nameisis\TranslationBundle\Manager\LocaleManagerInterface;
-use Nameisis\TranslationBundle\Translation\Importer\FileImporter;
-use Nameisis\TranslationBundle\Translation\TranslatorInterface as NameisisTranslator;
+use Selonia\TranslationBundle\Manager\LocaleManagerInterface;
+use Selonia\TranslationBundle\Translation\Importer\FileImporter;
+use Selonia\TranslationBundle\Translation\TranslatorInterface as NameisisTranslator;
 use ReflectionClass;
 use ReflectionException;
 use Symfony\Component\Console\Command\Command;
@@ -77,7 +77,7 @@ class ImportTranslationsCommand extends Command
      */
     protected function configure()
     {
-        $this->setName('nameisis:translation:import');
+        $this->setName('selonia:translation:import');
         $this->setDescription('Import all translations from flat files (xliff, yml, php) into the database.');
         $this->addOption('cache-clear', 'c', InputOption::VALUE_NONE, 'Remove translations cache files for managed locales.');
         $this->addOption('force', 'f', InputOption::VALUE_NONE, 'Force import, replace database content.');

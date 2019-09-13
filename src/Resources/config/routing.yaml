@@ -1,10 +1,10 @@
 nameisis_translation_controllers:
     resource: ../../Controller/
     type: annotation
-    prefix: /nameisis
+    prefix: /selonia
 
 nameisis_default:
-    path: /nameisis
+    path: /selonia
     controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::redirectAction
     defaults:
         route: nameisis_translation_overview

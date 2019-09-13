@@ -1,6 +1,6 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Utils\Profiler;
+namespace Selonia\TranslationBundle\Utils\Profiler;
 
 use Symfony\Component\HttpKernel\Profiler\Profiler;
 

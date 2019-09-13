@@ -1,8 +1,8 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Form\Type;
+namespace Selonia\TranslationBundle\Form\Type;
 
-use Nameisis\TranslationBundle\Entity\Domain;
+use Selonia\TranslationBundle\Entity\Domain;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;

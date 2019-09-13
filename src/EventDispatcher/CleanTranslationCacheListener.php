@@ -1,9 +1,9 @@
 <?php
 
-namespace Nameisis\TranslationBundle\EventDispatcher;
+namespace Selonia\TranslationBundle\EventDispatcher;
 
-use Nameisis\TranslationBundle\Manager\LocaleManagerInterface;
-use Nameisis\TranslationBundle\Storage\StorageInterface;
+use Selonia\TranslationBundle\Manager\LocaleManagerInterface;
+use Selonia\TranslationBundle\Storage\StorageInterface;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Contracts\Translation\TranslatorInterface;

@@ -1,8 +1,8 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Translation;
+namespace Selonia\TranslationBundle\Translation;
 
-use Nameisis\TranslationBundle\EventDispatcher\Event\GetDatabaseResourcesEvent;
+use Selonia\TranslationBundle\EventDispatcher\Event\GetDatabaseResourcesEvent;
 use RuntimeException;
 use Symfony\Bundle\FrameworkBundle\Translation\Translator as BaseTranslator;
 use Symfony\Component\Config\ConfigCache;

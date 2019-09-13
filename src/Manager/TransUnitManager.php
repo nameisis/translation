@@ -1,9 +1,9 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Manager;
+namespace Selonia\TranslationBundle\Manager;
 
-use Nameisis\TranslationBundle\Model\Translation;
-use Nameisis\TranslationBundle\Storage\StorageInterface;
+use Selonia\TranslationBundle\Model\Translation;
+use Selonia\TranslationBundle\Storage\StorageInterface;
 
 class TransUnitManager implements TransUnitManagerInterface
 {

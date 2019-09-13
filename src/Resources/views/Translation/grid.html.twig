@@ -29,7 +29,7 @@
             inputType: '{{ inputType }}',
             profilerTokens: {{ tokens is not null ? (tokens | json_encode | raw) : 'null' }},
             toggleSimilar: '{{ toggleSimilar }}',
-            csrfToken: '{{ csrf_token('nameisis-translation') }}',
+            csrfToken: '{{ csrf_token('selonia-translation') }}',
             url: {
                 list: '{{ path('nameisis_translation_list') }}',
                 listByToken: '{{ path('nameisis_translation_profiler', {'token': '-token-'}) }}',

@@ -1,6 +1,6 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Repository;
+namespace Selonia\TranslationBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
 use Vairogs\Utils\Utils\Doctrine\SingleColumnArrayHydrator;

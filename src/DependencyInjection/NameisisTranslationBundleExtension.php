@@ -1,10 +1,10 @@
 <?php
 
-namespace Nameisis\TranslationBundle\DependencyInjection;
+namespace Selonia\TranslationBundle\DependencyInjection;
 
 use Doctrine\ORM\Events;
 use Exception;
-use Nameisis\TranslationBundle\Storage\StorageInterface;
+use Selonia\TranslationBundle\Storage\StorageInterface;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\Config\Resource\DirectoryResource;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -19,7 +19,7 @@ use Vairogs\Utils\Utils\Iter;
 
 class NameisisTranslationBundleExtension extends Extension implements PrependExtensionInterface
 {
-    public const ALIAS = 'nameisis.translation';
+    public const ALIAS = 'selonia.translation';
     public const EXTENSION = 'nameisis_translation';
 
     public function prepend(ContainerBuilder $container): void
@@ -199,7 +199,7 @@ class NameisisTranslationBundleExtension extends Extension implements PrependExt
     protected function createDoctrineMappingDriver(ContainerBuilder $container, $driverId, $driverClass)
     {
         $driverDefinition = new Definition($driverClass, [
-            [dirname(__DIR__).'/Resources/config/model' => 'Nameisis\TranslationBundle\Model'],
+            [dirname(__DIR__).'/Resources/config/model' => 'Selonia\TranslationBundle\Model'],
         ]);
         $driverDefinition->setPublic(false);
         $container->setDefinition($driverId, $driverDefinition);

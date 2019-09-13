@@ -1,11 +1,11 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Storage;
+namespace Selonia\TranslationBundle\Storage;
 
 use DateTime;
-use Nameisis\TranslationBundle\Manager\FileInterface;
-use Nameisis\TranslationBundle\Manager\TransUnitInterface;
-use Nameisis\TranslationBundle\Model\TransUnit;
+use Selonia\TranslationBundle\Manager\FileInterface;
+use Selonia\TranslationBundle\Manager\TransUnitInterface;
+use Selonia\TranslationBundle\Model\TransUnit;
 
 interface StorageInterface
 {

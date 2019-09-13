@@ -1,6 +1,6 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Manager;
+namespace Selonia\TranslationBundle\Manager;
 
 use Symfony\Component\HttpFoundation\File\File;
 

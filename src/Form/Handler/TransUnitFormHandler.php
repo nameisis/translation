@@ -1,12 +1,12 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Form\Handler;
+namespace Selonia\TranslationBundle\Form\Handler;
 
-use Nameisis\TranslationBundle\Manager\FileInterface;
-use Nameisis\TranslationBundle\Manager\FileManagerInterface;
-use Nameisis\TranslationBundle\Manager\LocaleManagerInterface;
-use Nameisis\TranslationBundle\Manager\TransUnitManagerInterface;
-use Nameisis\TranslationBundle\Storage\StorageInterface;
+use Selonia\TranslationBundle\Manager\FileInterface;
+use Selonia\TranslationBundle\Manager\FileManagerInterface;
+use Selonia\TranslationBundle\Manager\LocaleManagerInterface;
+use Selonia\TranslationBundle\Manager\TransUnitManagerInterface;
+use Selonia\TranslationBundle\Storage\StorageInterface;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\Request;
 

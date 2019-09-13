@@ -1,6 +1,6 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Form\Handler;
+namespace Selonia\TranslationBundle\Form\Handler;
 
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\Request;

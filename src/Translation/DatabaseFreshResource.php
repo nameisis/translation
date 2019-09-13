@@ -1,6 +1,6 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Translation;
+namespace Selonia\TranslationBundle\Translation;
 
 use Symfony\Component\Config\Resource\SelfCheckingResourceInterface;
 

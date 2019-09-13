@@ -1,6 +1,6 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Repository;
+namespace Selonia\TranslationBundle\Repository;
 
 use DateTime;
 use Doctrine\ORM\EntityRepository;

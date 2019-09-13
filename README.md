@@ -1,1 +1,1 @@
-# nameisis/translation-bundle
+# selonia/translation-bundle

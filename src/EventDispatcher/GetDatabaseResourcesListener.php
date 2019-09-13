@@ -1,9 +1,9 @@
 <?php
 
-namespace Nameisis\TranslationBundle\EventDispatcher;
+namespace Selonia\TranslationBundle\EventDispatcher;
 
-use Nameisis\TranslationBundle\EventDispatcher\Event\GetDatabaseResourcesEvent;
-use Nameisis\TranslationBundle\Storage\StorageInterface;
+use Selonia\TranslationBundle\EventDispatcher\Event\GetDatabaseResourcesEvent;
+use Selonia\TranslationBundle\Storage\StorageInterface;
 
 class GetDatabaseResourcesListener
 {

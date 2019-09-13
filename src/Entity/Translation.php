@@ -1,12 +1,12 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Entity;
+namespace Selonia\TranslationBundle\Entity;
 
 use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 use Exception;
-use Nameisis\TranslationBundle\Manager\TranslationInterface;
-use Nameisis\TranslationBundle\Model\Translation as TranslationModel;
+use Selonia\TranslationBundle\Manager\TranslationInterface;
+use Selonia\TranslationBundle\Model\Translation as TranslationModel;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
@@ -21,7 +21,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  *     }
  * )
  * @ORM\Entity(
- *     repositoryClass = "Nameisis\TranslationBundle\Repository\TranslationRepository"
+ *     repositoryClass = "Selonia\TranslationBundle\Repository\TranslationRepository"
  * )
  * @ORM\HasLifecycleCallbacks()
  */

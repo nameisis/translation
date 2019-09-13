@@ -1,11 +1,11 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Command;
+namespace Selonia\TranslationBundle\Command;
 
-use Nameisis\TranslationBundle\Manager\FileInterface;
-use Nameisis\TranslationBundle\Storage\StorageInterface;
-use Nameisis\TranslationBundle\Translation\Exporter\ExporterCollector;
-use Nameisis\TranslationBundle\Translation\TranslatorInterface;
+use Selonia\TranslationBundle\Manager\FileInterface;
+use Selonia\TranslationBundle\Storage\StorageInterface;
+use Selonia\TranslationBundle\Translation\Exporter\ExporterCollector;
+use Selonia\TranslationBundle\Translation\TranslatorInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -64,7 +64,7 @@ class ExportTranslationsCommand extends Command
      */
     protected function configure()
     {
-        $this->setName('nameisis:translation:export');
+        $this->setName('selonia:translation:export');
         $this->setDescription('Export translations from the database to files.');
         $this->addOption('locales', 'l', InputOption::VALUE_OPTIONAL, 'Only export files for given locales. e.g. "--locales=en,de"', null);
         $this->addOption('domains', 'd', InputOption::VALUE_OPTIONAL, 'Only export files for given domains. e.g. "--domains=messages,validators"', null);

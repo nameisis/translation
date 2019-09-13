@@ -1,6 +1,6 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Storage;
+namespace Selonia\TranslationBundle\Storage;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Bridge\Doctrine\ManagerRegistry;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Storage;
+namespace Selonia\TranslationBundle\Storage;
 
 use Doctrine\DBAL\DBALException;
 use Doctrine\DBAL\DriverManager;

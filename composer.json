@@ -1,10 +1,10 @@
 {
-    "name": "nameisis/translation-bundle",
+    "name": "selonia/translation-bundle",
     "description": "Translation bundle",
     "license": "MIT",
     "type": "symfony-bundle",
     "keywords": [
-        "nameisis",
+        "selonia",
         "translation",
         "symfony"
     ],
@@ -21,11 +21,11 @@
         "symfony/framework-bundle": "~4.1",
         "symfony/http-kernel": "~4.1",
         "symfony/web-link": "~4.1",
-        "vairogs/vairogs-utils": "dev-master"
+        "vairogs/vairogs-utils": "2.x-dev"
     },
     "autoload": {
         "psr-4": {
-            "Nameisis\\TranslationBundle\\": "src/"
+            "Selonia\\TranslationBundle\\": "src/"
         }
     }
 }

@@ -1,14 +1,14 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Entity;
+namespace Selonia\TranslationBundle\Entity;
 
 use DateTime;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Exception;
-use Nameisis\TranslationBundle\Manager\FileInterface;
-use Nameisis\TranslationBundle\Model\File as FileModel;
+use Selonia\TranslationBundle\Manager\FileInterface;
+use Selonia\TranslationBundle\Model\File as FileModel;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
@@ -22,7 +22,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  *     }
  * )
  * @ORM\Entity(
- *     repositoryClass = "Nameisis\TranslationBundle\Repository\FileRepository"
+ *     repositoryClass = "Selonia\TranslationBundle\Repository\FileRepository"
  * )
  * @ORM\HasLifecycleCallbacks()
  */

@@ -1,8 +1,8 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Controller;
+namespace Selonia\TranslationBundle\Controller;
 
-use Nameisis\TranslationBundle\Utils\CsrfCheckerTrait;
+use Selonia\TranslationBundle\Utils\CsrfCheckerTrait;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;

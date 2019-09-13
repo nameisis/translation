@@ -1,6 +1,6 @@
 <?php
 
-namespace Nameisis\TranslationBundle\EventDispatcher\Event;
+namespace Selonia\TranslationBundle\EventDispatcher\Event;
 
 use Symfony\Component\EventDispatcher\Event;
 

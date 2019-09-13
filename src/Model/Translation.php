@@ -1,6 +1,6 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Model;
+namespace Selonia\TranslationBundle\Model;
 
 use DateTime;
 use Doctrine\ORM\Mapping as ORM;

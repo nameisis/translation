@@ -1,9 +1,9 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Utils\DataGrid;
+namespace Selonia\TranslationBundle\Utils\DataGrid;
 
-use Nameisis\TranslationBundle\Manager\LocaleManagerInterface;
-use Nameisis\TranslationBundle\Manager\TransUnitInterface;
+use Selonia\TranslationBundle\Manager\LocaleManagerInterface;
+use Selonia\TranslationBundle\Manager\TransUnitInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use function is_array;
 

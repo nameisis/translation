@@ -1,10 +1,10 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Utils;
+namespace Selonia\TranslationBundle\Utils;
 
 trait CsrfCheckerTrait
 {
-    protected function checkCsrf($id = 'nameisis-translation', $query = '_token')
+    protected function checkCsrf($id = 'selonia-translation', $query = '_token')
     {
         if (!$this->has('security.csrf.token_manager')) {
             return;

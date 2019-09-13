@@ -1,8 +1,8 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Manager;
+namespace Selonia\TranslationBundle\Manager;
 
-use Nameisis\TranslationBundle\Storage\StorageInterface;
+use Selonia\TranslationBundle\Storage\StorageInterface;
 
 class FileManager implements FileManagerInterface
 {

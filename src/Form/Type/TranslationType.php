@@ -1,6 +1,6 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Form\Type;
+namespace Selonia\TranslationBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;

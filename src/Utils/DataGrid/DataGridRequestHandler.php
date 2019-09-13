@@ -1,12 +1,12 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Utils\DataGrid;
+namespace Selonia\TranslationBundle\Utils\DataGrid;
 
-use Nameisis\TranslationBundle\Manager\FileManagerInterface;
-use Nameisis\TranslationBundle\Manager\LocaleManagerInterface;
-use Nameisis\TranslationBundle\Manager\TransUnitManagerInterface;
-use Nameisis\TranslationBundle\Model\TransUnit;
-use Nameisis\TranslationBundle\Storage\StorageInterface;
+use Selonia\TranslationBundle\Manager\FileManagerInterface;
+use Selonia\TranslationBundle\Manager\LocaleManagerInterface;
+use Selonia\TranslationBundle\Manager\TransUnitManagerInterface;
+use Selonia\TranslationBundle\Model\TransUnit;
+use Selonia\TranslationBundle\Storage\StorageInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpKernel\Profiler\Profile;

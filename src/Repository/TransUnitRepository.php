@@ -1,11 +1,11 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Repository;
+namespace Selonia\TranslationBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\Query;
 use Doctrine\ORM\QueryBuilder;
-use Nameisis\TranslationBundle\Model\File as ModelFile;
+use Selonia\TranslationBundle\Model\File as ModelFile;
 use Vairogs\Utils\Utils\Doctrine\SingleColumnArrayHydrator;
 
 class TransUnitRepository extends EntityRepository

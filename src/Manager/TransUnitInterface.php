@@ -1,8 +1,8 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Manager;
+namespace Selonia\TranslationBundle\Manager;
 
-use Nameisis\TranslationBundle\Model\Domain;
+use Selonia\TranslationBundle\Model\Domain;
 
 interface TransUnitInterface
 {

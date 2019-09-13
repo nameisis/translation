@@ -1,6 +1,6 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Manager;
+namespace Selonia\TranslationBundle\Manager;
 
 interface LocaleManagerInterface
 {

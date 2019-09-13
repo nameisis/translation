@@ -1,6 +1,6 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Storage\Listener;
+namespace Selonia\TranslationBundle\Storage\Listener;
 
 use Doctrine\ORM\Event\LoadClassMetadataEventArgs;
 use Doctrine\ORM\Mapping\ClassMetadataInfo;

@@ -1,11 +1,11 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Entity;
+namespace Selonia\TranslationBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use Nameisis\TranslationBundle\Model\Domain as DomainModel;
+use Selonia\TranslationBundle\Model\Domain as DomainModel;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
@@ -19,7 +19,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  *     }
  * )
  * @ORM\Entity(
- *     repositoryClass = "Nameisis\TranslationBundle\Repository\DomainRepository"
+ *     repositoryClass = "Selonia\TranslationBundle\Repository\DomainRepository"
  * )
  */
 class Domain extends DomainModel

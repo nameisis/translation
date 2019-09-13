@@ -1,6 +1,6 @@
 <?php
 
-namespace Nameisis\TranslationBundle\DependencyInjection\Compiler;
+namespace Selonia\TranslationBundle\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\Compiler\ServiceLocatorTagPass;

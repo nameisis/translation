@@ -1,6 +1,6 @@
 <?php
 
-namespace Nameisis\TranslationBundle\Translation\Exporter;
+namespace Selonia\TranslationBundle\Translation\Exporter;
 
 use RuntimeException;
 
